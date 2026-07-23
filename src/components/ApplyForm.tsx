@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { site } from "@/data/content";
 
 const projectTypes = [
@@ -15,6 +15,13 @@ type Status = "idle" | "loading" | "sent" | "error";
 export function ApplyForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (status === "sent") {
+      successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [status]);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -57,6 +64,32 @@ export function ApplyForm() {
           : "Something went wrong. Please try again.",
       );
     }
+  }
+
+  if (status === "sent") {
+    return (
+      <div
+        ref={successRef}
+        className="mx-auto w-full max-w-2xl rounded-2xl border border-teal/20 bg-cream-panel px-6 py-10 text-center sm:px-10"
+        role="status"
+        aria-live="polite"
+      >
+        <p className="font-display text-2xl font-bold tracking-tight text-ink md:text-3xl">
+          Application sent
+        </p>
+        <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-ink-soft">
+          Got it — your application is in my inbox. I usually reply within a
+          day.
+        </p>
+        <button
+          type="button"
+          onClick={() => setStatus("idle")}
+          className="mt-8 text-sm font-semibold text-teal underline decoration-2 underline-offset-4"
+        >
+          Send another
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -113,7 +146,7 @@ export function ApplyForm() {
         tabIndex={-1}
         autoComplete="off"
         aria-hidden
-        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        className="pointer-events-none absolute -left-[9999px] h-0 w-0 opacity-0"
       />
 
       <button
@@ -124,15 +157,8 @@ export function ApplyForm() {
         {status === "loading" ? "Sending…" : "Send application"}
       </button>
 
-      {status === "sent" && (
-        <p className="text-sm text-teal">
-          Got it — your application is in my inbox. I usually reply within a
-          day.
-        </p>
-      )}
-
       {status === "error" && (
-        <p className="text-sm text-[#a33a1a]">
+        <p className="rounded-xl border border-[#a33a1a]/25 bg-[#a33a1a]/8 px-4 py-3 text-sm text-[#a33a1a]" role="alert">
           {error} Or email me directly at{" "}
           <a className="underline" href={`mailto:${site.email}`}>
             {site.email}

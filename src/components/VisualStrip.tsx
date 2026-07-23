@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
 
 const frames = [
-  { src: "/vibe/design01.jpg", label: "Design" }, 
+  { src: "/vibe/design.jpg", label: "Design" }, 
   { src: "/vibe/laptop.jpg", label: "Build" },
   { src: "/vibe/web.jpg", label: "Launch" },
 ];

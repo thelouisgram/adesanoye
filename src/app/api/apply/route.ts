@@ -58,9 +58,7 @@ export async function POST(request: Request) {
     }
 
     const to = process.env.CONTACT_TO_EMAIL || site.email;
-    const from =
-      process.env.RESEND_FROM_EMAIL ||
-      `${site.brand} <onboarding@resend.dev>`;
+    const from = "A² Studio <onboarding@resend.dev>";
 
     const resend = new Resend(apiKey);
 

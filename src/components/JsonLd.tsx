@@ -26,7 +26,7 @@ export function JsonLd({ url }: JsonLdProps) {
     "@type": "ProfessionalService",
     "@id": `${url}/#organization`,
     name: site.brand,
-    alternateName: ["A2 Studio", "Adesanoye Studio"],
+    alternateName: ["Adesanoye Studio"],
     url,
     logo: `${url}/icon`,
     image: `${url}/og.png`,

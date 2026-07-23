@@ -46,7 +46,6 @@ export const metadata: Metadata = {
   publisher: site.brand,
   keywords: [
     "A² Studio",
-    "A2 Studio",
     "Adeyeye Adesanoye",
     "Louis",
     "web design",
@@ -97,7 +96,6 @@ export const metadata: Metadata = {
   other: {
     "ai-content-declaration": "human-created",
   },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

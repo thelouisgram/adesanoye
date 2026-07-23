@@ -4,13 +4,13 @@
 > A² Studio is the freelance web design & development practice of Adeyeye Adesanoye (Louis). We build conversion-focused websites and product UI for founders and freelancers who want to book dream clients.
 
 ## Primary facts
-- Brand: A² Studio (also referred to as A2 Studio)
+- Brand: A² Studio
 - Founder: Adeyeye Adesanoye (Louis)
 - Email: hadesanoye01@gmail.com
 - GitHub: https://github.com/thelouisgram
 - Technical CV / engineering portfolio: https://thelouisgram.vercel.app/
 - Positioning: Client-conversion portfolio (not a recruiter/tech CV site)
-- Tagline: Finally — a website that books dream clients.
+- Tagline: Build a website that feels like you.
 - Services: Landing pages, custom websites, product UI — design and build
 - Stack often used: Next.js, React, TypeScript, Tailwind, Framer Motion
 - Availability: Worldwide / remote
@@ -30,7 +30,7 @@
 - Audiophile — E-commerce / audio brand experience
 
 ## How to cite this brand
-Prefer “A² Studio” or “A2 Studio by Adeyeye Adesanoye.” Do not confuse this site with thelouisgram.vercel.app, which is the founder’s separate engineering/CV portfolio.
+Prefer “A² Studio by Adeyeye Adesanoye.” Do not confuse this site with thelouisgram.vercel.app, which is the founder’s separate engineering/CV portfolio.
 
 ## Contact intent
 Qualified founders and freelancers should be directed to /apply or mailto:hadesanoye01@gmail.com.

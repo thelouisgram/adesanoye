@@ -4,9 +4,9 @@ export const site = {
   email: "hadesanoye01@gmail.com",
   github: "https://github.com/thelouisgram",
   techPortfolio: "https://thelouisgram.vercel.app/",
-  tagline: "Finally — a website that books dream clients.",
+  tagline: "Build a website that feels like you.",
   description:
-    "A² Studio designs and builds conversion-focused websites for founders and freelancers. Custom web design & development that books dream clients — not DIY templates.",
+    "A² Studio designs and builds custom websites for founders and freelancers who want something that feels considered — and quietly converts.",
 };
 
 export const projects = [
@@ -42,7 +42,7 @@ export const projects = [
       "Pixel-precise Figma build — bold type, clean rhythm, and a site that feels on-brand.",
     href: "https://mac-azure-two.vercel.app/",
     tone: "lime",
-    cover: "/vibe/design.jpg",
+    cover: "/vibe/mac-analytics.jpg",
   },
   {
     id: "arch",
@@ -97,6 +97,27 @@ export const pains = [
   "Your work got better. Your site didn’t keep up.",
   "You’ve said “I need to redo the site” three times this year.",
   "Desktop looks okay. Mobile makes you nervous.",
+];
+
+export const testimonials = [
+  {
+    name: "Heart",
+    role: "Hotel & CRM project",
+    quote:
+      "Louis built the website and CRM for my dad’s hotel. Guests finally get the experience online — and the team can actually manage bookings without the chaos.",
+  },
+  {
+    name: "Daniel",
+    role: "Luxe Dispense · site & CRM",
+    quote:
+      "From the Luxe Dispense site to the CRM behind it — everything feels connected. Operators see what’s happening, and the brand finally looks as sharp as the product.",
+  },
+  {
+    name: "Kalu",
+    role: "African NGO",
+    quote:
+      "Our NGO site needed to feel trustworthy and human. He got the tone right — clear stories, calm design, and a presence that helps people take us seriously.",
+  },
 ];
 
 export const marqueeItems = [

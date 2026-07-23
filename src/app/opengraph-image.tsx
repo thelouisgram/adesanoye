@@ -92,7 +92,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.35,
             }}
           >
-            Finally — a website that books dream clients.
+            Build a website that feels like you.
           </div>
           <div
             style={{
