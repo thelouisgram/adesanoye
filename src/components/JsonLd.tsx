@@ -28,7 +28,7 @@ export function JsonLd({ url }: JsonLdProps) {
     name: site.brand,
     alternateName: ["Adesanoye Studio"],
     url,
-    logo: `${url}/icon`,
+    logo: `${url}/brand/mark.svg`,
     image: `${url}/og.png`,
     description,
     email: site.email,
