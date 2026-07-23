@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #e8ebe6;
+  --bg-deep: #dce1db;
+  --ink: #0a0d0b;
+  --ink-soft: #2f3a34;
+  --muted: #66736b;
+  --line: #c2cbc4;
+  --teal: #0c5548;
+  --teal-deep: #083c33;
+  --lime: #c6ff3d;
+  --lime-hot: #b4f02a;
+  --cream-panel: #f3f5f1;
+  --ember: #c45c26;
+  --sea: #1a6b8a;
+  --stone: #5c635c;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-deep: var(--bg-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-lime: var(--lime);
+  --color-lime-hot: var(--lime-hot);
+  --color-cream-panel: var(--cream-panel);
+  --color-ember: var(--ember);
+  --color-sea: var(--sea);
+  --color-stone: var(--stone);
+  --font-display: var(--font-syne);
+  --font-sans: var(--font-figtree);
+  --font-serif: var(--font-newsreader);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-syne), system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-newsreader), Georgia, serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-2%, -3%);
+  }
+  30% {
+    transform: translate(3%, 1%);
+  }
+  50% {
+    transform: translate(-1%, 4%);
+  }
+  70% {
+    transform: translate(2%, -2%);
+  }
+  90% {
+    transform: translate(-3%, 1%);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 34s linear infinite;
+}
+
+.animate-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-rise {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.grain::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -20%;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(2) infinite;
+}
+
+.project-tone-forest {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, #1a7a62 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 85% 70%, #0a3d34 0%, transparent 50%),
+    linear-gradient(145deg, #0f5c4c, #071f1a);
+}
+
+.project-tone-ink {
+  background:
+    radial-gradient(ellipse 70% 55% at 75% 25%, #2a3540 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 15% 80%, #1a2228 0%, transparent 45%),
+    linear-gradient(160deg, #12181c, #0a0d10);
+}
+
+.project-tone-lime {
+  background:
+    radial-gradient(ellipse 65% 55% at 30% 40%, #c6e83a 0%, transparent 55%),
+    radial-gradient(ellipse 50% 45% at 90% 20%, #9fc41f 0%, transparent 45%),
+    linear-gradient(150deg, #d4f34a, #a8c92e);
+  color: var(--ink);
+}
+
+.project-tone-sea {
+  background:
+    radial-gradient(ellipse 75% 55% at 70% 35%, #2a8fb0 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 20% 75%, #0e4a62 0%, transparent 50%),
+    linear-gradient(155deg, #1a6b8a, #0b3344);
+}
+
+.project-tone-stone {
+  background:
+    radial-gradient(ellipse 70% 50% at 25% 30%, #8a9188 0%, transparent 50%),
+    radial-gradient(ellipse 60% 45% at 80% 70%, #4a524a 0%, transparent 45%),
+    linear-gradient(150deg, #5c635c, #2e332e);
+}
+
+.project-tone-ember {
+  background:
+    radial-gradient(ellipse 70% 55% at 65% 30%, #e07a3a 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 15% 80%, #8a3a18 0%, transparent 50%),
+    linear-gradient(155deg, #c45c26, #5c2410);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-float,
+  .animate-rise,
+  .grain::before {
+    animation: none !important;
+  }
+}
