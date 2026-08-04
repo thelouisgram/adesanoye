@@ -8,6 +8,45 @@ import { site } from "@/data/content";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const collage = [
+  {
+    src: "/vibe/hero-collage/person-1.jpg",
+    alt: "Young creative professional smiling",
+    className: "col-span-2 row-span-2",
+    objectPosition: "50% 18%",
+  },
+  {
+    src: "/vibe/hero-collage/person-2.jpg",
+    alt: "Young founder smiling at camera",
+    className: "col-span-1 row-span-1",
+    objectPosition: "50% 12%",
+  },
+  {
+    src: "/vibe/hero-collage/person-3.jpg",
+    alt: "Young woman with curly hair laughing",
+    className: "col-span-1 row-span-1",
+    objectPosition: "50% 18%",
+  },
+  {
+    src: "/vibe/hero-collage/person-4.jpg",
+    alt: "Young man in casual professional wear",
+    className: "col-span-1 row-span-1",
+    objectPosition: "50% 10%",
+  },
+  {
+    src: "/vibe/hero-collage/person-5.jpg",
+    alt: "Young professional woman in meeting",
+    className: "col-span-1 row-span-1",
+    objectPosition: "50% 15%",
+  },
+  {
+    src: "/vibe/hero-collage/person-6.jpg",
+    alt: "Young woman with confident expression",
+    className: "col-span-1 row-span-1",
+    objectPosition: "50% 20%",
+  },
+] as const;
+
 const stickers = [
   {
     label: "No boring sites",
@@ -109,15 +148,28 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.18, ease }}
           className="relative mx-auto w-full max-w-md flex-1 lg:mx-0 lg:max-w-[46%]"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_70px_-20px_rgba(10,13,11,0.35)] sm:aspect-[5/6]">
-            <Image
-              src="/vibe/founder-lead.jpg"
-              alt="Professional founder portrait"
-              fill
-              priority
-              sizes="(max-width: 1024px) 90vw, 46vw"
-              className="object-cover object-[50%_15%]"
-            />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-cream-panel p-2 shadow-[0_30px_70px_-20px_rgba(10,13,11,0.35)] sm:aspect-[5/6] sm:p-2.5">
+            <div className="grid h-full min-h-0 grid-cols-3 grid-rows-3 gap-1.5 sm:gap-2">
+              {collage.map((photo, i) => (
+                <motion.div
+                  key={photo.src}
+                  initial={reduce ? false : { opacity: 0, scale: 0.94 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.28 + i * 0.06, duration: 0.5, ease }}
+                  className={`relative min-h-0 overflow-hidden rounded-xl ${photo.className}`}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 45vw, 22vw"
+                    className="object-cover"
+                    style={{ objectPosition: photo.objectPosition }}
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           {stickers.map((sticker, i) => (
