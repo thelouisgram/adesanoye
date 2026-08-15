@@ -11,6 +11,17 @@ export const site = {
 
 export const projects = [
   {
+    id: "suzies",
+    title: "Suzie's Hotel",
+    role: "Hotel site & reception PMS",
+    category: "Hospitality",
+    description:
+      "Public booking site plus a full reception system — rooms, reservations, housekeeping, and live front-desk ops.",
+    href: "https://safahnahotel.vercel.app",
+    tone: "stone",
+    cover: "/vibe/suzies-hotel.jpg",
+  },
+  {
     id: "nodoseoff",
     title: "NoDoseOff",
     role: "Medication adherence platform",
@@ -24,10 +35,10 @@ export const projects = [
   {
     id: "luxe",
     title: "Luxe Dispense",
-    role: "Smart vending machine",
+    role: "Smart vending for venues",
     category: "Hospitality tech",
     description:
-      "Inventory, telemetry, and payments shaped into a polished operator-facing product.",
+      "Cashless machines with live telemetry, predictive restocking, and a full-height ad screen — zero staff overhead for partners.",
     href: "https://247luxedispense.com",
     tone: "ink",
     cover: "/vibe/orange-vending.jpg",
@@ -102,15 +113,15 @@ export const pains = [
 export const testimonials = [
   {
     name: "Heart",
-    role: "Hotel & CRM project",
+    role: "Suzie's Hotel · site & PMS",
     quote:
-      "Louis built the website and CRM for my dad’s hotel. Guests finally get the experience online — and the team can actually manage bookings without the chaos.",
+      "Louis built the website and reception system for the hotel. Guests finally get the experience online — and the team can actually manage bookings without the chaos.",
   },
   {
     name: "Daniel",
-    role: "Luxe Dispense · site & CRM",
+    role: "Luxe Dispense · site & operator CRM",
     quote:
-      "From the Luxe Dispense site to the CRM behind it — everything feels connected. Operators see what’s happening, and the brand finally looks as sharp as the product.",
+      "From the Luxe Dispense site to the CRM behind it — telemetry, restocking, and brand finally feel like one product. Operators see what’s happening, and the machines look as sharp as they run.",
   },
   {
     name: "Kalu",
