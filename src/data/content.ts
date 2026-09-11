@@ -11,17 +11,6 @@ export const site = {
 
 export const projects = [
   {
-    id: "suzies",
-    title: "Suzie's Hotel",
-    role: "Hotel site & reception PMS",
-    category: "Hospitality",
-    description:
-      "Public booking site plus a full reception system — rooms, reservations, housekeeping, and live front-desk ops.",
-    href: "https://safahnahotel.vercel.app",
-    tone: "stone",
-    cover: "/vibe/suzies-hotel.jpg",
-  },
-  {
     id: "nodoseoff",
     title: "NoDoseOff",
     role: "Medication adherence platform",
@@ -111,12 +100,6 @@ export const pains = [
 ];
 
 export const testimonials = [
-  {
-    name: "Heart",
-    role: "Suzie's Hotel · site & PMS",
-    quote:
-      "Louis built the website and reception system for the hotel. Guests finally get the experience online — and the team can actually manage bookings without the chaos.",
-  },
   {
     name: "Daniel",
     role: "Luxe Dispense · site & operator CRM",
